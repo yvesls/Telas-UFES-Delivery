@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Gerente</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="estilo.css" type="text/css">
+        <link href="/fontawesome-free-6.1.1-web/css/all.css" rel="stylesheet">
+        <script defer src="/fontawesome-free-6.1.1-web/js/all.js"></script>
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	</head> 
+	<body class="body">
+		    <header class="w-100 bg-cinza">
+          <div class=" d-flex justify-content-around mt-3">
+            <a href="#" class="link-menu"></a>
+            <a href="#" class="link-menu"></a>
+            <a href="#"><img src="imagens/logo.png" alt=""></a>
+            <a href="#" class="link-menu"></a>
+            <a href="#" class="link-menu"></a>
+          </div>
+          
+          <!-- Dados primários (que aparecerão primeiro) -->
+          <div class="usuario-data d-flex w-100 justify-content-between">
+            <!-- em nome do usuário vai como exemplo: João Silva. Local de inserção dinâmica -->
+            <div class=" p-3 m-3"><span class="usuario px-3 py-3">Usuário</span><span id="nomeUsuario" class="user px-3 py-3">Nome do usuário</span></div>
+            <!-- local de inserção dinâmica -->
+            <div class=" p-3 m-3"><span class="data px-3 py-3">Data: <span id="dataEHora"></span>15 de Abril 15:40</span></div>
+          </div>
+        </header>
+    
+        <div class="col-6 container-middle d-flex flex-column mx-auto text-center">
+          <h2 class="mb-4">Menu Principal</h2>
+          <button id="buttonPagar" type="button" class="btn btn-dark btn-lg m-2" data-toggle="modal" data-target="#manterCategorias">Categorias</button>
+          <button id="buttonPagar" type="button" class="btn btn-dark btn-lg m-2" data-toggle="modal" data-target="#manterProdutos">Produtos</button>
+          <button id="buttonPagar" type="button" class="btn btn-dark btn-lg m-2" data-toggle="modal" data-target="#manterEntregadores">Entregadores</button>
+        </div>
+
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	</body>
+</html>
