@@ -30,9 +30,87 @@
     
         <div class="col-6 container-middle d-flex flex-column mx-auto text-center">
           <h2 class="mb-4">Menu Principal</h2>
-          <button id="buttonPagar" type="button" class="btn btn-dark btn-lg m-2" data-toggle="modal" data-target="#manterCategorias">Categorias</button>
-          <button id="buttonPagar" type="button" class="btn btn-dark btn-lg m-2" data-toggle="modal" data-target="#manterProdutos">Produtos</button>
-          <button id="buttonPagar" type="button" class="btn btn-dark btn-lg m-2" data-toggle="modal" data-target="#manterEntregadores">Entregadores</button>
+          <button id="" type="button" class="btn btn-dark btn-lg m-2" data-toggle="modal" data-target="#menuCategorias">Categorias</button>
+          <button id="" type="button" class="btn btn-dark btn-lg m-2" data-toggle="modal" data-target="#menuProdutos">Produtos</button>
+          <button id="" type="button" class="btn btn-dark btn-lg m-2" data-toggle="modal" data-target="#menuEntregadores">Entregadores</button>
+        </div>
+
+        <!-- Modal - Menu categoria -->
+        <div class="modal fade" id="menuCategorias" tabindex="-1" role="dialog" aria-labelledby="menuCategoriasTitle" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content bg-cinza">
+              <div class="modal-header bg-dark">
+                <h5 class="modal-title text-white" id="menuCategoriasTitle">Menu</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true" class="text-white">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body d-flex flex-column">
+                <button id="" type="button" class="btn btn-dark btn-lg m-2" data-toggle="modal" data-target="#criarCategorias">Criar nova categoria</button>
+                <button id="" type="button" class="btn btn-dark btn-lg m-2" data-toggle="modal" data-target="#manterCategorias">Editar categorias</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal - Cria categoria -->
+        <div class="modal fade" id="criarCategorias" tabindex="-1" role="dialog" aria-labelledby="criarCategoriasTitle" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content bg-cinza">
+              <div class="modal-header bg-dark">
+                <h5 class="modal-title text-white" id="criarCategoriasTitle">Criar nova categoria</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true" class="text-white">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body d-flex flex-column">
+                <div class="col-auto p-3">
+                  <label for="nomeCategoria" class="visually-hidden">Nome da categoria:</label>
+                  <input type="text" class="form-control" id="nomeCategoria" placeholder="Ex: Vitamina">
+                </div>
+              </div>
+              <div class="d-flex justify-content-between">
+                <button id="" type="button" class="btn btn-secondary m-3">Confirmar</button>
+                <button id="" type="button" class="btn btn-secondary m-3" data-dismiss="modal">Voltar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal - Menu produto -->
+        <div class="modal fade" id="menuProdutos" tabindex="-1" role="dialog" aria-labelledby="menuProdutosTitle" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content bg-cinza">
+              <div class="modal-header bg-dark">
+                <h5 class="modal-title text-white" id="menuProdutosTitle">Menu</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true" class="text-white">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body d-flex flex-column">
+                <button id="" type="button" class="btn btn-dark btn-lg m-2" data-toggle="modal" data-target="#criarCategorias">Registrar novo produto</button>
+                <button id="" type="button" class="btn btn-dark btn-lg m-2" data-toggle="modal" data-target="#manterCategorias">Editar produtos</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal - Menu entregador -->
+        <div class="modal fade" id="menuEntregadores" tabindex="-1" role="dialog" aria-labelledby="menuEntregadoresTitle" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content bg-cinza">
+              <div class="modal-header bg-dark">
+                <h5 class="modal-title text-white" id="menuEntregadoresTitle">Menu</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true" class="text-white">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body d-flex flex-column">
+                <button id="" type="button" class="btn btn-dark btn-lg m-2" data-toggle="modal" data-target="#criarCategorias">Registrar novo entregador</button>
+                <button id="" type="button" class="btn btn-dark btn-lg m-2" data-toggle="modal" data-target="#manterCategorias">Editar entregadores</button>
+              </div>
+            </div>
+          </div>
         </div>
 
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
