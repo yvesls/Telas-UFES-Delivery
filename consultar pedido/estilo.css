@@ -166,7 +166,7 @@
 
 		#check-situacao:active {
 			position: relative;
-			top: 10px;
+			top: 2px;
 		}
 
 		#check-situacao:hover {
@@ -186,7 +186,8 @@
 		.select-checks {
 			background-color: #ececec;
 			position: absolute;
-			top: 36px;
+			top: 8.65vh;
+			margin-left: 100px;
 			border: 1px solid #777777;
 			border-radius: 5px;
 			padding: 10px;

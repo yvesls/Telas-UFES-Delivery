@@ -52,7 +52,22 @@
             <td>R$ 7,00</td>
             <td><img id="sacola" src="imagens/plus-solid.svg" value="1" class="icons-sacola" data-toggle="modal" data-target="#adicionadocomsucesso"></td>
           </tr>
-          
+          <tr>
+            <td>Porção de batata frita</td>
+            <td><span id="menos"><img src="imagens/minus-solid.svg" class="icons p-1 mr-2"></span><span id="valor" value="'+ 1 +'">1</span><span id="mais"><img src="imagens/plus-solid.svg" class="icons p-1 ml-2"></span></td>
+            <td>Porção</td>
+            <td>R$ 25,00</td>
+            <td>R$ 25,00</td>
+            <td><img id="sacola" src="imagens/plus-solid.svg" value="1" class="icons-sacola" data-toggle="modal" data-target="#adicionadocomsucesso"></td>
+          </tr>
+          <tr>
+            <td>Suco de maracujá</td>
+            <td><span id="menos"><img src="imagens/minus-solid.svg" class="icons p-1 mr-2"></span><span id="valor" value="'+ 1 +'">1</span><span id="mais"><img src="imagens/plus-solid.svg" class="icons p-1 ml-2"></span></td>
+            <td>Suco</td>
+            <td>R$ 5,00</td>
+            <td>R$ 5,00</td>
+            <td><img id="sacola" src="imagens/plus-solid.svg" value="1" class="icons-sacola" data-toggle="modal" data-target="#"></td>
+          </tr>
         </tbody>
       </table>
       <!-- Exibir apenas se o delivery não estiver funcionando -->
@@ -123,7 +138,7 @@
       <!-- div com botões -->
       <div class="col-5 float-left mx-auto d-flex justify-content-end">
         <button id="buttonPagar" type="button" class="btn btn-dark" data-toggle="modal" data-target="#fazerPagamento">Pagar</button>
-        <small id="requisitoPagar" class="text-danger position-absolute"></small>
+        <small id="requisitoPagar" class="text-danger position-absolute">Você não possui nenhum item em sua sacola.</small>
       </div>
       
       
@@ -282,7 +297,7 @@
                       <img class="icons-pagamento" src="imagens/arrow-alt-circle-left-regular.svg" />
                     </div>
                     <div class="col-9 float-left">
-                      <a href="#" class="text-dark" data-dismiss="modal" data-toggle="modal" data-target="#erroNoCancelamento">
+                      <a href="#" class="text-dark" data-dismiss="modal" data-toggle="modal" data-target="#cancelamentoDoPedido">
                         <b>Você poderá cancelar o pedido antes que ele seja preparado para envio.</b>
                       </a>
                     </div>
@@ -326,6 +341,7 @@
                   <div class="m-2">
                     <label for="motivoCancelamento">Motivo:</label> <br>
                     <textarea name="motivoCancelamento" id="motivoCancelamento" rows="7" class="p-4 bg-cinza-claro w-100"></textarea>
+                    <small class="text-danger">Você não preencheu um campo obrigatório.</small>
                   </div>
               </div>
               <div class="d-flex justify-content-end">
@@ -388,7 +404,7 @@
                 </button>
               </div>
               <div class="modal-body">
-                <div class="m-2">
+                <div class="m-2 col-12">
                   <label for="motivoCancelamento">Conte-nos o que achou:</label> <br>
                   <textarea name="motivoCancelamento" id="motivoCancelamento" rows="7" class="p-4 bg-cinza-claro w-100 form-control"></textarea>
                 </div>
@@ -397,6 +413,7 @@
                   <input type="number" min="1" max="5" class="p-1 bg-cinza-claro form-control">
                 </div>
               </div>
+              <small class="text-danger m-2 col-12 p-4">Você não preencheu um campo obrigatório.</small>
               <div class="d-flex justify-content-end">
                 <button type="button" class="btn btn-secondary m-3 mt-0" data-dismiss="modal" data-toggle="modal" data-target="#avaliacaoRegistrada">Confirmar</button>
               </div>

@@ -23,7 +23,7 @@
             <!-- em nome do usuário vai como exemplo: João Silva. Local de inserção dinâmica -->
             <div class=" p-3 m-3"><span class="usuario px-3 py-3">Usuário</span><span id="nomeUsuario" class="user px-3 py-3">Nome do usuário</span></div>
             <!-- local de inserção dinâmica -->
-            <div class=" p-3 m-3"><span class="data px-3 py-3">Data: <span id="dataEHora"></span>15 de Abril 15:40</span></div>
+            <div class=" p-3 m-3"><span class="data px-3 py-3">Data: <span id="dataEHora"></span>22 de Março 23:10</span></div>
           </div>
         </header>
 
@@ -222,7 +222,7 @@
                 </button>
               </div>
               <div class="modal-body text-center">
-                <table class="table">
+                <!-- <table class="table">
                   <thead>
                     <tr>
                       <th class="" scope="col">Pedido</th>
@@ -248,7 +248,8 @@
                       <td><i class="fa-solid fa-sack-dollar" data-toggle="modal" data-target="#reembolsado"></i></td>
                     </tr>
                   </tbody>
-              </table>
+                </table> -->
+                <h2 class="p-5">Não existem pedidos cancelados que aguardam o reembolso.</h2>
               </div>
               <div class="d-flex justify-content-end">
                 <button id="encomendarPedido" type="button" class="btn btn-secondary col-2 m-3" data-dismiss="modal">Voltar</button>
@@ -306,7 +307,7 @@
                     <td>22/03/22 às 23:04</td>
                     <td>R$ 20,00</td>
                     <td><img src="imagens/plus-solid.svg" class="icons-sacola" data-toggle="modal" data-target="#pedidoCancelado"></td>
-                    <td>Enviado</td>
+                    <td>Confirmado</td>
                   </tr>
                   <tr>
                     <td>00003</td>
@@ -332,18 +333,20 @@
                     <td><img src="imagens/plus-solid.svg" class="icons-sacola"></td>
                     <td>Em andamento</td>
                   </tr>
+                  <!-- Modelo de resultado para busca por situação e data (quando não existem pedidos para a mesma informada) da funcionalidade: "consultar pedidos confirmados por data quando não há pedidos nessa situação informada" dos critérios de aceite do Consultar Pedido -->
+                  <!-- <tr>
+                    <td colspan="6" class="n-funcioando text-center">
+                      <div class="">Nenhum pedido <span></span> nesta data informada. </div>
+                    </div>
+                  </tr> -->
+                  <!-- Modelo segundo a funcionalidade "Nenhum pedido confirmado para a data de hoje" dos critérios de aceite do Consultar Pedido -->
+                  <!-- <tr>
+                    <td colspan="6" class="n-funcioando text-center">
+                      <div class="">Não existem pedidos confirmados até o momento para hoje (23/03/2022 às 20:45)</div>
+                    </div>
+                  </tr> -->
                 </tbody>
             </table>
-              <!-- Modelo de resultado para busca por situação e data (quando não existem pedidos para a mesma informada) da funcionalidade: "consultar pedidos confirmados por data quando não há pedidos nessa situação informada" dos critérios de aceite do Consultar Pedido -->
-              <!-- <div class="n-funcioando d-flex justify-content-center flex-column text-center">-->
-                <!-- dentro do span vai a situação informada na hora da busca (se for mais de uma coloca "ou" entre as palavras e se for "todas" coloca nada)-->
-                <!--<div class="">Nenhum pedido <span></span> nesta data informada. </div>
-              </div> -->
-              
-              <!-- Modelo segundo a funcionalidade "Nenhum pedido confirmado para a data de hoje" dos critérios de aceite do Consultar Pedido -->
-              <!-- <div class="n-funcioando d-flex justify-content-center flex-column text-center">
-                <div class="">Não existem pedidos confirmados até o momento para hoje (23/03/2022 às 20:45)</div>
-              </div> -->
         </section>
 
 		

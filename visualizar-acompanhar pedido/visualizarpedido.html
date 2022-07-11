@@ -114,7 +114,7 @@
 
         <!-- Tabela com todos os pedidos (Modelo) -->
         <section class=" container-middle px-5 py-3 text-center">
-            <table class="table">
+           <table class="table">
                 <thead>
                   <tr>
                     <th scope="col">Pedido</th>
@@ -124,22 +124,32 @@
                     <th scope="col">Situação</th>
                   </tr>
                 </thead>
-                <tbody>
+                 <tbody>
                   <!-- Inserção dos pedidos de forma dinâmica. Dados presentes no momento apenas para visualização -->
-                  <tr>
+                  <!-- <tr>
                     <td>00001</td>
                     <td>22/03/22 às 20:02</td>
                     <td>R$ 7,00</td>
                     <td ><img src="imagens/plus-solid.svg" class="icons-sacola" data-toggle="modal" data-target="#detalhesPedido"></td>
                     <td>Confirmado</td>
                   </tr>
+                  <tr>
+                    <td>00000</td>
+                    <td>20/03/22 às 22:08</td>
+                    <td>R$ 20,00</td>
+                    <td ><img src="imagens/plus-solid.svg" class="icons-sacola" data-toggle="modal" data-target="#detalhesPedido"></td>
+                    <td>Entregue</td>
+                  </tr> -->
+                  <tr>
+                    <!-- dentro do span vai a situação informada na hora da busca (se for mais de uma coloca "ou" entre as palavras e se for "todas" coloca nada)-->
+                    <td  colspan="5" class="n-funcioando text-center">
+                      <div>Você não possui nenhum pedido.</div>  
+                    </td>
+                  </tr>
                 </tbody>
             </table>
               <!-- Modelo de resultado para busca por situação e data (quando não existem pedidos para a mesma informada) da funcionalidade: "consultar pedidos confirmados por data quando não há pedidos nessa situação informada" dos critérios de aceite do Consultar Pedido -->
-              <!-- <div class="n-funcioando d-flex justify-content-center flex-column text-center">-->
-                <!-- dentro do span vai a situação informada na hora da busca (se for mais de uma coloca "ou" entre as palavras e se for "todas" coloca nada)-->
-                <!--<div class="">Nenhum pedido <span></span> nesta data informada. </div>
-              </div> -->
+              
               
               <!-- Modelo segundo a funcionalidade "Nenhum pedido confirmado para a data de hoje" dos critérios de aceite do Consultar Pedido -->
               <!-- <div class="n-funcioando d-flex justify-content-center flex-column text-center">
