@@ -69,6 +69,7 @@
                   <label for="nomeCategoria" class="visually-hidden">Nome da categoria:</label>
                   <input type="text" class="form-control" id="nomeCategoria" placeholder="Ex: Vitamina">
                 </div>
+                <small class="text-danger px-3">Esta categoria já está cadastrada.</small>
               </div>
               <div class="d-flex justify-content-between">
                 <button id="" type="button" class="btn btn-secondary m-3">Confirmar</button>
@@ -101,7 +102,7 @@
                     <tbody>
                       <!-- Inserção dos pedidos de forma dinâmica. Dados presentes no momento apenas para visualização -->
                       <tr>
-                        <td>Vitamina</td>
+                        <td><input type="text" value="Vitamina" class="form-control"></td>
                         <td><i class="fas fa-edit text-success"></i></td>
                         <td><i class="fas fa-trash text-danger"></i></td>
                       </tr>
@@ -378,8 +379,8 @@
                 </button>
               </div>
               <div class="p-4">
-                <h5>Registrado com sucesso</h5><br>
-                <span id="mensagemRegistro">Mensagem tratada conforme o caso de uso correspondente</span>
+                <h5>Categoria registrada com sucesso</h5><br>
+                <!-- <span id="mensagemRegistro">Mensagem tratada conforme o caso de uso correspondente</span> -->
               </div>
               <div class="w-100 d-flex justify-content-end">
                 <button type="button" class="btn btn-secondary mx-4 mb-4" data-dismiss="modal">Voltar</button>
@@ -420,7 +421,7 @@
                 </button>
               </div>
               <div class="p-4">
-                <h5>Item excluído com sucesso</h5><br>
+                <h5>Categoria excluída com sucesso</h5><br>
               </div>
               <div class="w-100 d-flex justify-content-end">
                 <button type="button" class="btn btn-secondary mx-4 mb-4" data-dismiss="modal">Voltar</button>
@@ -440,7 +441,7 @@
                 </button>
               </div>
               <div class="p-4">
-                <h5>Item alterado com sucesso</h5><br>
+                <h5>Categoria alterada com sucesso</h5><br>
               </div>
               <div class="w-100 d-flex justify-content-end">
                 <button type="button" class="btn btn-secondary mx-4 mb-4" data-dismiss="modal">Voltar</button>
