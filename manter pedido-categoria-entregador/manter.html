@@ -100,7 +100,6 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <!-- Inserção dos pedidos de forma dinâmica. Dados presentes no momento apenas para visualização -->
                       <tr>
                         <td><input type="text" value="Vitamina" class="form-control"></td>
                         <td><i class="fas fa-edit text-success"></i></td>
@@ -190,6 +189,7 @@
                   <label for="valorProduto" class="visually-hidden">Valor do produto:</label>
                   <input type="text" class="form-control" id="valorProduto" placeholder="Ex: R$ 10,00">
                 </div>
+                <small class="text-danger px-3">Este produto já está cadastrado.</small>
               </div>
               <div class="d-flex justify-content-between">
                 <button id="" type="button" class="btn btn-secondary m-3">Confirmar</button>
@@ -223,12 +223,21 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <!-- Inserção dos pedidos de forma dinâmica. Dados presentes no momento apenas para visualização -->
                       <tr>
-                        <td>Vitamina de morango</td>
-                        <td>40</td>
-                        <td>Vitamina</td>
-                        <td>R$ 7,00</td>
+                        <td><input type="text" value="Vitamina de morango" class="form-control"></td>
+                        <td><input type="number" value="40" class="form-control"></td>
+                        <td>
+                          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Categoria
+                          </button>
+                          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Hambúrguer</a>
+                            <a class="dropdown-item" href="#">Vitamina</a>
+                            <a class="dropdown-item" href="#">Suco</a>
+                            <a class="dropdown-item" href="#">Porção</a>
+                          </div>
+                        </td>
+                        <td><input type="text" value="7,00" class="form-control"></td>
                         <td><i class="fas fa-edit text-success"></i></td>
                         <td><i class="fas fa-trash text-danger"></i></td>
                       </tr>
@@ -309,6 +318,7 @@
                   <label for="horarioEntregador" class="visually-hidden">Horário de trabalho do entregador:</label>
                   <input type="text" class="form-control" id="horarioEntregador" placeholder="Ex: 15:00 às 23:00">
                 </div>
+                <small class="text-danger px-3">Este entregador já está cadastrado.</small>
               </div>
               <div class="d-flex justify-content-between">
                 <button id="" type="button" class="btn btn-secondary m-3" data-toggle="modal" data-target="#registradoSucesso">Confirmar</button>
@@ -343,9 +353,9 @@
                     <tbody>
                       <!-- Inserção dos pedidos de forma dinâmica. Dados presentes no momento apenas para visualização -->
                       <tr>
-                        <td>José Felipe</td>
-                        <td>jose.felipe@gmail.com</td>
-                        <td>19:30 às 23:59</td>
+                        <td><input type="text" value="José Felipe" class="form-control"></td>
+                        <td><input type="text" value="jose.felipe@gmail.com" class="form-control"></td>
+                        <td><input type="text" value="19:30 às 23:59" class="form-control"></td>
                         <td><i class="fas fa-edit text-success" data-toggle="modal" data-target="#itemAlterado"></i></td>
                         <td><i class="fas fa-trash text-danger" data-toggle="modal" data-target="#excluirItem"></i></td>
                       </tr>
@@ -379,7 +389,7 @@
                 </button>
               </div>
               <div class="p-4">
-                <h5>Categoria registrada com sucesso</h5><br>
+                <h5>Entregador registrado com sucesso</h5><br>
                 <!-- <span id="mensagemRegistro">Mensagem tratada conforme o caso de uso correspondente</span> -->
               </div>
               <div class="w-100 d-flex justify-content-end">
@@ -400,7 +410,7 @@
                 </button>
               </div>
               <div class="p-4">
-                <h5>Tem certeza que deseja excluir o item?</h5><br>
+                <h5>Tem certeza que deseja excluir o entregador?</h5><br>
               </div>
               <div class="d-flex justify-content-between w-50 mx-auto">
                 <button id="" type="button" class="btn btn-secondary m-3" data-dismiss="modal" data-toggle="modal" data-target="#itemExcluido">Sim</button>
@@ -421,7 +431,7 @@
                 </button>
               </div>
               <div class="p-4">
-                <h5>Categoria excluída com sucesso</h5><br>
+                <h5>Entregador excluído com sucesso</h5><br>
               </div>
               <div class="w-100 d-flex justify-content-end">
                 <button type="button" class="btn btn-secondary mx-4 mb-4" data-dismiss="modal">Voltar</button>
@@ -441,7 +451,7 @@
                 </button>
               </div>
               <div class="p-4">
-                <h5>Categoria alterada com sucesso</h5><br>
+                <h5>Entregador alterado com sucesso</h5><br>
               </div>
               <div class="w-100 d-flex justify-content-end">
                 <button type="button" class="btn btn-secondary mx-4 mb-4" data-dismiss="modal">Voltar</button>
