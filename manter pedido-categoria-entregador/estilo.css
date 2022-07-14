@@ -48,7 +48,7 @@
 			height: 20vh;
 		}
 
-		.link-menu {
+		.link-menu.link-menu.link-menu.link-menu {
 			color: black;
 			padding: 5px 20px;
 			border-radius: 15px;
@@ -56,9 +56,14 @@
 			text-align: center;
 		}
 
-		.link-menu:hover, .active {
+		.active.active.active.active.active.active.active, .link-menu.link-menu>.btn.btn.btn:hover {
 			color: #015db3;
-			text-decoration: none;
+			border: none;
+			border-bottom: 2px solid #015db3;
+		}
+
+		.link-menu.link-menu .btn.btn.btn:focus, .link-menu.link-menu .btn.btn.btn:not(:hover) {
+			border: none;
 		}
 
 		.modal {
@@ -128,18 +133,18 @@
 		/*consultar pedidos*/
 
 		.container-middle {
-			height: 60vh;
 			position: fixed;
-			top: 35vh;
-			overflow-y: scroll;
-			width: 100%;
+			top: 25vh;
+			background-color: #e6e6e6;
+			padding: 30px;
+			border-radius: 20px;
 		}
 
 		.janela-detalhes {
 			padding: 20px;
 			background-color: white;
 			width: 60vw;
-			border: 3px solid #777777;
+			border: 3px solid #4e3a3a;
 			border-radius: 5px;
 			margin-bottom: 10px;
 			/* position: absolute;

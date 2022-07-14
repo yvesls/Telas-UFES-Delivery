@@ -4,20 +4,36 @@
 		<title>Gerente</title>
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="estilo.css" type="text/css">
-        <link href="/fontawesome-free-6.1.1-web/css/all.css" rel="stylesheet">
-        <script defer src="/fontawesome-free-6.1.1-web/js/all.js"></script>
-        <script defer src="https://kit.fontawesome.com/bf49d14db6.js" crossorigin="anonymous"></script>
+    <script defer src="https://kit.fontawesome.com/bf49d14db6.js" crossorigin="anonymous"></script>
 		<!-- Bootstrap CSS -->
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 	</head> 
-	<body class="body">
+	<body class="body d-flex justify-content-center">
 		    <header class="w-100 bg-cinza">
           <div class=" d-flex justify-content-around mt-3">
-            <a href="#" class="link-menu"></a>
-            <a href="#" class="link-menu"></a>
+            <div class="dropdown link-menu">
+              <a class="btn" href="" role="button" id="menuCategorias">
+                
+              </a>
+            </div>
+            <div class="dropdown link-menu">
+              <a class="btn" href="" role="button" id="menuProdutos">
+                
+              </a>
+            </div>
+
             <a href="#"><img src="imagens/logo.png" alt=""></a>
-            <a href="#" class="link-menu"></a>
-            <a href="#" class="link-menu"></a>
+            
+            <div class="dropdown link-menu">
+              <a class="btn" href="#" role="button" id="menuEntregadores">
+                
+              </a>
+            </div>      
+            <div class="dropdown link-menu">
+              <a class="btn" type="button" role="button" id="configuracoesManter">
+                Configurações
+              </a>
+            </div>      
           </div>
           
           <!-- Dados primários (que aparecerão primeiro) -->
@@ -29,28 +45,67 @@
           </div>
         </header>
     
-        <div class="col-6 container-middle d-flex flex-column mx-auto text-center">
-          <h2 class="mb-4">Menu Principal</h2>
-          <button id="" type="button" class="btn btn-dark btn-lg m-2" data-toggle="modal" data-target="#menuCategorias">Categorias</button>
-          <button id="" type="button" class="btn btn-dark btn-lg m-2" data-toggle="modal" data-target="#menuProdutos">Produtos</button>
-          <button id="" type="button" class="btn btn-dark btn-lg m-2" data-toggle="modal" data-target="#menuEntregadores">Entregadores</button>
-        </div>
-
-        <!-- Modal - Menu categoria -->
-        <div class="modal fade" id="menuCategorias" tabindex="-1" role="dialog" aria-labelledby="menuCategoriasTitle" aria-hidden="true">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content bg-cinza">
-              <div class="modal-header bg-dark">
-                <h5 class="modal-title text-white" id="menuCategoriasTitle">Menu</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true" class="text-white">&times;</span>
+        <div class="col-8 container-middle d-flex flex-column mx-auto text-center">
+          <div class="col-8 d-flex align-items-end pb-5">
+            <div class="dropdown">
+              <div class="d-flex flex-column text-start">
+                <small>Buscar por:</small>
+                <button class="btn btn-dark dropdown-toggle px-2" type="button" value="Nome" id="tipoBuscCategoria" data-bs-toggle="dropdown" aria-expanded="false">
+                  Nome da categoria
                 </button>
-              </div>
-              <div class="modal-body d-flex flex-column">
-                <button id="" type="button" class="btn btn-dark btn-lg m-2" data-toggle="modal" data-target="#criarCategorias">Criar nova categoria</button>
-                <button id="" type="button" class="btn btn-dark btn-lg m-2" data-toggle="modal" data-target="#manterCategorias">Editar categorias</button>
+                 <ul class="dropdown-menu" aria-labelledby="tipoBuscCategoria">
+                  <li><a class="dropdown-item" href="#">Código da categoria</a></li>
+                  <li><a class="dropdown-item" href="#">Nome da categoria</a></li>
+                </ul>
               </div>
             </div>
+            <input type="text" class="form-control mx-2" id="campoBusca" placeholder="">
+            <button type="button" class="btn btn-dark">Buscar</button>
+          </div>
+          <div class="col-12 pb-5">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Nome da categoria</th>
+                  <th scope="col">Editar</th>
+                  <th scope="col">Excluir</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    Vitamina
+                    <!-- <input type="text" value="Vitamina" class="form-control"> -->
+                  </td>
+                  <td><i class="fas fa-edit text-success"></i></td>
+                  <td><i class="fas fa-trash text-danger"></i></td>
+                </tr>
+                <tr>
+                  <td>Hambúrguer</td>
+                  <td><i class="fas fa-edit text-success"></i></td>
+                  <td><i class="fas fa-trash text-danger"></i></td>
+                </tr>
+                <tr>
+                  <td>Suco</td>
+                  <td><i class="fas fa-edit text-success"></i></td>
+                  <td><i class="fas fa-trash text-danger"></i></td>
+                </tr>
+                <tr>
+                  <td>Misto</td>
+                  <td><i class="fas fa-edit text-success"></i></td>
+                  <td><i class="fas fa-trash text-danger"></i></td>
+                </tr>
+                <tr>
+                  <td>Porção</td>
+                  <td><i class="fas fa-edit text-success"></i></td>
+                  <td><i class="fas fa-trash text-danger"></i></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="w-25 d-flex">
+            <button id="" type="button" class="btn btn-secondary px-5 m-0">Salvar</button>
+            <button id="" type="button" class="btn btn-secondary px-5 mx-5">Criar</button>
           </div>
         </div>
 
@@ -59,22 +114,19 @@
           <div class="modal-dialog" role="document">
             <div class="modal-content bg-cinza">
               <div class="modal-header bg-dark">
-                <h5 class="modal-title text-white" id="criarCategoriasTitle">Criar nova categoria</h5>
+                <div class="col-8 p-5 d-flex align-items-baseline">
+                  <label for="nomeCategoria" class="col-4">Nome da categoria:</label>
+                  <input type="text" class="form-control" id="nomeCategoria" placeholder="Ex: Vitamina">
+                </div>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true" class="text-white">&times;</span>
                 </button>
               </div>
               <div class="modal-body d-flex flex-column">
-                <div class="col-auto p-3">
-                  <label for="nomeCategoria" class="visually-hidden">Nome da categoria:</label>
-                  <input type="text" class="form-control" id="nomeCategoria" placeholder="Ex: Vitamina">
-                </div>
+                
                 <small class="text-danger px-3">Esta categoria já está cadastrada.</small>
               </div>
-              <div class="d-flex justify-content-between">
-                <button id="" type="button" class="btn btn-secondary m-3">Confirmar</button>
-                <button id="" type="button" class="btn btn-secondary m-3" data-dismiss="modal">Voltar</button>
-              </div>
+              
             </div>
           </div>
         </div>
@@ -461,7 +513,6 @@
         </div>
 
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 	</body>
 </html>
