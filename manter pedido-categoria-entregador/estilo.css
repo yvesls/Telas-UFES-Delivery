@@ -18,7 +18,7 @@
 		}
 
 		::-webkit-scrollbar-track {
-			background-color: #cacaca;
+			background-color: #e6e6e6;
 		}
 		
 		::-webkit-scrollbar {
@@ -56,13 +56,21 @@
 			text-align: center;
 		}
 
-		.active.active.active.active.active.active.active, .link-menu.link-menu>.btn.btn.btn:hover {
-			color: #015db3;
-			border: none;
-			border-bottom: 2px solid #015db3;
+		.menu-lateral {
+			border-radius: 15px 0 0 15px;
 		}
 
-		.link-menu.link-menu .btn.btn.btn:focus, .link-menu.link-menu .btn.btn.btn:not(:hover) {
+		.menu-lateral > .btn.btn.btn.btn.btn.btn {
+			border: none;
+			border-bottom: 2px solid #cccccc00;
+		}
+
+		.active.active.active.active.active.active.active, .menu-lateral > .btn.btn.btn.btn.btn.btn:hover {
+			color: #c4c4c4;
+			border-color: #cccccc;
+		}
+
+		.menu-lateral > .btn.btn.btn:focus, .menu-lateral > .btn.btn.btn:not(:hover) {
 			border: none;
 		}
 
@@ -132,12 +140,20 @@
 
 		/*consultar pedidos*/
 
+		.lista-itens {
+			position: fixed;
+			overflow-y: scroll;
+			top: 43vh;
+			height: 40vh;
+		}
+
+
 		.container-middle {
+			height: 70vh;
 			position: fixed;
 			top: 25vh;
 			background-color: #e6e6e6;
-			padding: 30px;
-			border-radius: 20px;
+			border-radius: 15px;
 		}
 
 		.janela-detalhes {

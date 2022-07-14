@@ -13,25 +13,19 @@
           <div class=" d-flex justify-content-around mt-3">
             <div class="dropdown link-menu">
               <a class="btn" href="" role="button" id="menuCategorias">
-                
               </a>
             </div>
             <div class="dropdown link-menu">
               <a class="btn" href="" role="button" id="menuProdutos">
-                
               </a>
             </div>
-
             <a href="#"><img src="imagens/logo.png" alt=""></a>
-            
             <div class="dropdown link-menu">
               <a class="btn" href="#" role="button" id="menuEntregadores">
-                
               </a>
             </div>      
             <div class="dropdown link-menu">
               <a class="btn" type="button" role="button" id="configuracoesManter">
-                Configurações
               </a>
             </div>      
           </div>
@@ -45,69 +39,180 @@
           </div>
         </header>
     
-        <div class="col-8 container-middle d-flex flex-column mx-auto text-center">
-          <div class="col-8 d-flex align-items-end pb-5">
-            <div class="dropdown">
-              <div class="d-flex flex-column text-start">
-                <small>Buscar por:</small>
-                <button class="btn btn-dark dropdown-toggle px-2" type="button" value="Nome" id="tipoBuscCategoria" data-bs-toggle="dropdown" aria-expanded="false">
-                  Nome da categoria
-                </button>
-                 <ul class="dropdown-menu" aria-labelledby="tipoBuscCategoria">
-                  <li><a class="dropdown-item" href="#">Código da categoria</a></li>
-                  <li><a class="dropdown-item" href="#">Nome da categoria</a></li>
-                </ul>
+        <section class="col-10 container-middle d-flex">
+          <div class="menu-lateral col-2 bg-dark d-flex flex-column align-items-center justify-content-center p-5 m-0">
+            <a class="btn text-white active m-4" href="" role="button" id="menuCategorias">
+                Categorias
+            </a>
+            <a class="btn text-white m-4" href="" role="button" id="menuProdutos">
+                Produtos
+            </a>
+            <a class="btn text-white m-4" href="" role="button" id="menuEntregadores">
+                Entregadores
+            </a>
+            <a class="btn text-white m-4" type="button" role="button" id="configuracoesManter">
+              Configurações
+            </a>
+          </div>
+          <div id="menuPrincipal" class="col-8 d-flex flex-column mx-auto text-center p-5">
+            <div id="crudCategoria" class="h-100 d-flex flex-column justify-content-between">
+              <div class="col-8 d-flex align-items-end pb-5">
+                <div class="dropdown">
+                  <div class="d-flex flex-column text-start">
+                    <small>Buscar por:</small>
+                    <button class="btn btn-dark dropdown-toggle px-2" type="button" value="Nome" id="tipoBuscCategoria" data-bs-toggle="dropdown" aria-expanded="false">
+                      Nome da categoria
+                    </button>
+                     <ul class="dropdown-menu" aria-labelledby="tipoBuscCategoria">
+                      <li><a class="dropdown-item" href="#">Código da categoria</a></li>
+                      <li><a class="dropdown-item" href="#">Nome da categoria</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <input type="text" class="form-control mx-2" id="campoBusca" placeholder="">
+                <button type="button" class="btn btn-dark">Buscar</button>
+              </div>
+
+              <div class="col-6 lista-itens">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Nome da categoria</th>
+                      <th scope="col">Editar</th>
+                      <th scope="col">Excluir</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        Vitamina
+                        <!-- <input type="text" value="Vitamina" class="form-control"> -->
+                      </td>
+                      <td><i class="fas fa-edit text-success"></i></td>
+                      <td><i class="fas fa-trash text-danger"></i></td>
+                    </tr>
+                    <tr>
+                      <td>Hambúrguer</td>
+                      <td><i class="fas fa-edit text-success"></i></td>
+                      <td><i class="fas fa-trash text-danger"></i></td>
+                    </tr>
+                    <tr>
+                      <td>Suco</td>
+                      <td><i class="fas fa-edit text-success"></i></td>
+                      <td><i class="fas fa-trash text-danger"></i></td>
+                    </tr>
+                    <tr>
+                      <td>Misto</td>
+                      <td><i class="fas fa-edit text-success"></i></td>
+                      <td><i class="fas fa-trash text-danger"></i></td>
+                    </tr>
+                    <tr>
+                      <td>Porção</td>
+                      <td><i class="fas fa-edit text-success"></i></td>
+                      <td><i class="fas fa-trash text-danger"></i></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="w-25 d-flex">
+                <button id="" type="button" class="btn btn-secondary px-5 m-0" data-toggle="modal" data-target="#criarCategorias">Salvar</button>
+                <button id="" type="button" class="btn btn-secondary px-5 mx-5" data-toggle="modal" data-target="#criarCategorias">Criar</button>
               </div>
             </div>
-            <input type="text" class="form-control mx-2" id="campoBusca" placeholder="">
-            <button type="button" class="btn btn-dark">Buscar</button>
+
+            <div id="crudPedidos" class="h-100 d-flex flex-column justify-content-between d-none">
+              <div class="col-8 d-flex align-items-end pb-5">
+                <div class="dropdown">
+                  <div class="d-flex flex-column text-start">
+                    <small>Buscar por:</small>
+                    <button class="btn btn-dark dropdown-toggle px-2" type="button" value="Nome" id="tipoBuscCategoria" data-bs-toggle="dropdown" aria-expanded="false">
+                      Nome do produto
+                    </button>
+                     <ul class="dropdown-menu" aria-labelledby="tipoBuscCategoria">
+                      <li><a class="dropdown-item" href="#">Código do produto</a></li>
+                      <li><a class="dropdown-item" href="#">Nome do produto</a></li>
+                      <li><a class="dropdown-item" href="#">Valor do produto</a></li>
+                      <li><a class="dropdown-item" href="#">Quantidade do produto</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <input type="text" class="form-control mx-2" id="campoBusca" placeholder="">
+                <button type="button" class="btn btn-dark">Buscar</button>
+              </div>
+              <div class="col-6 lista-itens">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Nome do produto</th>
+                      <th scope="col">Quantidade</th>
+                      <th scope="col">Categoria</th>
+                      <th scope="col">Valor unitário</th>
+                      <th scope="col">Editar</th>
+                      <th scope="col">Excluir</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><input type="text" value="Vitamina de morango" class="form-control"></td>
+                      <td><input type="number" value="40" class="form-control"></td>
+                      <td>
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Categoria
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item" href="#">Hambúrguer</a>
+                          <a class="dropdown-item" href="#">Vitamina</a>
+                          <a class="dropdown-item" href="#">Suco</a>
+                          <a class="dropdown-item" href="#">Porção</a>
+                        </div>
+                      </td>
+                      <td><input type="text" value="7,00" class="form-control"></td>
+                      <td><i class="fas fa-edit text-success"></i></td>
+                      <td><i class="fas fa-trash text-danger"></i></td>
+                    </tr>
+                    <tr>
+                      <td>Suco de abacaxi</td>
+                      <td>50</td>
+                      <td>Suco</td>
+                      <td>R$ 5,00</td>
+                      <td><i class="fas fa-edit text-success"></i></td>
+                      <td><i class="fas fa-trash text-danger"></i></td>
+                    </tr>
+                    <tr>
+                      <td>Presunto e queijo</td>
+                      <td>30</td>
+                      <td>Misto</td>
+                      <td>R$ 8,00</td>
+                      <td><i class="fas fa-edit text-success"></i></td>
+                      <td><i class="fas fa-trash text-danger"></i></td>
+                    </tr>
+                    <tr>
+                      <td>Porção de fritas</td>
+                      <td>30</td>
+                      <td>Porção</td>
+                      <td>R$ 20,00</td>
+                      <td><i class="fas fa-edit text-success"></i></td>
+                      <td><i class="fas fa-trash text-danger"></i></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="w-25 d-flex">
+                <button id="" type="button" class="btn btn-secondary px-5 m-0">Salvar</button>
+                <button id="" type="button" class="btn btn-secondary px-5 mx-5" data-toggle="modal" data-target="#criarProdutos">Criar</button>
+              </div>
+            </div>
+            <div id="crudEntregadores">
+
+            </div>
+            <div id="menuConfiguracoes">
+
+            </div>
+            
           </div>
-          <div class="col-12 pb-5">
-            <table class="table">
-              <thead>
-                <tr>
-                  <th scope="col">Nome da categoria</th>
-                  <th scope="col">Editar</th>
-                  <th scope="col">Excluir</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>
-                    Vitamina
-                    <!-- <input type="text" value="Vitamina" class="form-control"> -->
-                  </td>
-                  <td><i class="fas fa-edit text-success"></i></td>
-                  <td><i class="fas fa-trash text-danger"></i></td>
-                </tr>
-                <tr>
-                  <td>Hambúrguer</td>
-                  <td><i class="fas fa-edit text-success"></i></td>
-                  <td><i class="fas fa-trash text-danger"></i></td>
-                </tr>
-                <tr>
-                  <td>Suco</td>
-                  <td><i class="fas fa-edit text-success"></i></td>
-                  <td><i class="fas fa-trash text-danger"></i></td>
-                </tr>
-                <tr>
-                  <td>Misto</td>
-                  <td><i class="fas fa-edit text-success"></i></td>
-                  <td><i class="fas fa-trash text-danger"></i></td>
-                </tr>
-                <tr>
-                  <td>Porção</td>
-                  <td><i class="fas fa-edit text-success"></i></td>
-                  <td><i class="fas fa-trash text-danger"></i></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="w-25 d-flex">
-            <button id="" type="button" class="btn btn-secondary px-5 m-0">Salvar</button>
-            <button id="" type="button" class="btn btn-secondary px-5 mx-5">Criar</button>
-          </div>
-        </div>
+        </section>
+        
+        
 
         <!-- Modal - Cria categoria -->
         <div class="modal fade" id="criarCategorias" tabindex="-1" role="dialog" aria-labelledby="criarCategoriasTitle" aria-hidden="true">
